@@ -1,0 +1,296 @@
+/*——————————————————Global variables / formatting——————————————————*/
+
+:root {
+    --base-color1: #a3d5e3;
+    --base-color2: #e32b84;
+    --base-color3: #1f1b5c;
+    --grey: #353837;
+    
+  }
+  
+  * {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: "Work Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    overflow-x: hidden;
+  }
+  
+  .white-text {
+    color: white;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  /*——————————————————————————————————————————————————————*/
+  
+  
+  /*——————————————————Header——————————————————*/
+  
+  header {
+    background-color: var(--base-color3);
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    box-shadow: 0 3px 5px rgba(0,0,0,0.3);
+    z-index: 2;
+  }
+  
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    
+  }
+  
+  .header-name {
+    color: var(--base-color1);
+    font-weight: 600;
+    font-size: 35px;
+    letter-spacing: 0.3rem;
+  }
+  
+  nav {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    
+  }
+  
+  nav > ul {
+    display: flex;
+    
+  }
+  
+  .navlink:hover {
+    background-color: var(--base-color1);
+    color: var(--base-color3);
+  }
+  
+  .navlink {
+    
+    margin: 0 auto;
+    padding: 20px 30px;
+    font-weight: 500;
+  }
+  
+  /*——————————————————————————————————————————————————————*/
+  
+  
+  /*——————————————————Welcome Section——————————————————*/
+  
+  .welcome-section {
+    height: 100vh;
+  }
+  
+  .hover-wrapper{
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+  }
+  
+  .hover-wrapper:hover ~ .welcome-text, .hover-wrapper:hover ~.subtitle-text{
+    opacity: 100%;
+    top: 40%;
+    transition: top 2s 0.2s ease-out, opacity 2s 0.2s ease-out;
+  }
+  
+  .welcome-text {
+    font-size: 4rem;
+    text-shadow: 5px 10px 10px rgba(0,0,0,0.5);
+    font-weight: 500;
+    letter-spacing: 0.8rem;
+  }
+  
+  .subtitle-text {
+    margin-top: 30px;
+    font-size: 1.5rem;
+    text-shadow: 2px 5px 5px rgba(0,0,0,0.5);
+    font-weight: 400;
+    letter-spacing: 0.8rem;
+    color: var(--base-color3);
+  }
+  
+  .welcome-text, .subtitle-text {
+    transition: opacity 0.7s linear, top 5s ease-in;
+    opacity: 0%;
+    position: relative;
+    text-align: center;
+    top: 45%;
+    
+  }
+  
+  .background-img {
+    background-image: url(https://wallpapers.com/images/featured/tundra-tiykvo4igv9jwu5x.jpg);
+    background-color: rgba(215, 233, 240,0.7);
+    background-blend-mode: lighten;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+  
+  /*——————————————————————————————————————————————————————*/
+  
+  
+  /*——————————————————Projects——————————————————*/
+  
+  .project-section {
+    background-color: var(--grey);
+    padding: 100px;
+    text-align: center;
+  }
+  
+  .project-heading {
+    max-width: 1000px;
+    margin: 0 auto 50px;
+    padding-bottom: 20px;
+    font-size: 2.5rem;
+    letter-spacing: 0.2rem;
+    border-bottom: 5px dotted white;
+  }
+  
+  .projects-grid {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px,1fr));
+    grid-gap: 50px;
+  }
+  
+  .project-tile {
+    width: 100%;
+    height: 280px;
+    background-color: #1c2326;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    transition: all 0.3s;
+  }
+  
+  .project-tile:hover {
+    box-shadow: 7px 7px 5px rgba(0,0,0,0.8);
+    top: -5px;
+    left: -1px;
+    transition: all 0.3s;
+  }
+  
+  .project-tile > img {
+    width: 100%;
+    height: 240px;
+    object-position: 50% top;
+    object-fit: cover;
+  
+  }
+  
+  p {
+    margin: auto 0;
+    font-size: 0.8rem;
+  }
+  
+  .projects-bottom-divider {
+    border-top: 5px dotted white;
+    max-width: 1000px;
+    margin: 50px auto 50px;
+  }
+  
+  
+  /*——————————————————————————————————————————————————————*/
+  
+  /*——————————————————Contact——————————————————*/
+  
+  .contact-heading {
+    font-size: 2.5rem;
+    letter-spacing: 0.2rem;
+    margin-top: 50px;
+    
+    text-align: center;
+  }
+  
+  .socials {
+    
+    margin: 0 auto;
+    width: 90%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  
+  }
+  
+  .profile {
+    max-width: 400px;
+    width: 80%;
+    padding: 0 20px;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+    transition: box-shadow 0.3s;
+  }
+  
+  .profile img {
+    width: 100px;
+    object-fit: scale-down;
+  }
+  
+  .profile p {
+    padding: 10px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    color: black;
+  }
+
+  .profile:hover {
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    transition: box-shadow 0.3s;
+  }
+  
+  /*——————————————————————————————————————————————————————*/
+  
+  
+  /*——————————————————Media queries——————————————————*/
+  
+  @media only screen and (width < 700px) {
+    .navlink {
+      padding: 22px 10px;
+      height: 60px;
+      font-weight: 300;
+      font-size: 0.9rem
+    }
+  }
+  
+  @media only screen and (width < 550px) {
+    nav > ul {
+      display: none;
+    }
+  
+    nav {
+      justify-content: space-around;
+    }
+  
+  }
+
+  @media only screen and (width > 1000px) {
+    .projects-grid {
+      grid-template-columns: repeat(2,1fr);
+    }
+  }
